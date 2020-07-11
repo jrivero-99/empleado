@@ -1,0 +1,12 @@
+<h1> Lista Por Palabra Clave </h1>
+<form method="GET">{% csrf_token %}
+    <input type="text" id="kword" name="kword" placeholder="ingrese nombre aqui">
+    <button type="submit">Buscar</button>
+</form>
+<h3>Lista resultados</h3>
+<ul>
+    <!-- for e in object_list  tambien funciona -->
+    {% for e in empleados %}
+        <li>{{ e }} </li>
+    {% endfor %}
+</ul>
